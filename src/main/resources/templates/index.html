@@ -9,5 +9,11 @@
 </head>
 <body>
 
+    <div class="container">
+        <div class="row" th:each="book : ${books}">
+            <img th:src="@{'/img/' + ${book.name} + '.jpg'}">
+        </div>
+    </div>
+
 </body>
 </html>
