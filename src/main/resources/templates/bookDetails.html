@@ -11,7 +11,7 @@
 <body>
     <div id="head">
         <div id="headContent">
-            <h3>demoBooks.com</h3>
+            <a th:href="@{/}"><h3>demoBooks.com</h3></a>
         </div>
     </div>
     <div class="container">
@@ -23,6 +23,11 @@
             <b>Rok druku: </b><i class="text" th:text="${book.year}"></i>
             <br>
             <b>liczba stron: </b><i class="text" th:text="${book.pages}"></i>
+            <br>
+            <a th:href="@{'/category/' + ${category.categoryId}}">
+                <div class="button" th:text="${'#' + {category.name}}"></div>
+            </a>
+
         </div>
     </div>
 

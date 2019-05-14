@@ -52,11 +52,11 @@ img{
     border-radius: 10px 10px 10px 10px;
 }
 
-.row {
+.rowImg {
     opacity: 1;
 }
 
-.row:hover {
-    opacity: 0.6;
+.rowImg:hover {
+    opacity: 0.7;
 }
 
