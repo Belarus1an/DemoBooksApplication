@@ -3,14 +3,26 @@
 <head>
     <meta charset="UTF-8">
 
-    <link rel="stylesheet" th:href="@{/css.css}" />
+    <link rel="stylesheet" th:href="@{/cssDetails.css}" />
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
 
     <title>Title</title>
 </head>
 <body>
+    <div id="head">
+        <div id="headContent">
+            <h3>demoBooks.com</h3>
+        </div>
+    </div>
     <div class="container">
         <div class="row">
             <img th:src="@{'/img/' + ${book.nameImg} + '.jpg'}">
+            <p th:text="${book.nameBook}"></p>
+            <b>Autor: </b><i class="text" th:text="${book.author}"></i>
+            <br>
+            <b>Rok druku: </b><i class="text" th:text="${book.year}"></i>
+            <br>
+            <b>liczba stron: </b><i class="text" th:text="${book.pages}"></i>
         </div>
     </div>
 

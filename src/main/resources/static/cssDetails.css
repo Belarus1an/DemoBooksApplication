@@ -27,36 +27,32 @@ body{
 }
 
 .container{
-    width: 570px;
-    height: 550px;
+    width: 545px;
+    height: 500px;
     margin: auto;
 }
 
 .row{
-    width: 170px;
-    height: 255px;
-    float: left;
-    margin: 10px 10px;
-    text-align: center;
+    width: 270px;
+    height: 455px;
+    margin: auto;
+    margin-top: 30px;
+    position: relative;
+
 }
 
 p{
     margin-top: 0px;
+    text-align: center;
 }
 
-
 img{
-    width: 170px;
-    height: 210px;
+    width: 270px;
+    height: 340px;
     border: 3px solid rgba(0,0,0,0.38);
     border-radius: 10px 10px 10px 10px;
 }
 
-.row {
-    opacity: 1;
+.text{
+    float: right;
 }
-
-.row:hover {
-    opacity: 0.6;
-}
-

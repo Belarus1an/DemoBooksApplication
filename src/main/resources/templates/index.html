@@ -4,11 +4,16 @@
     <meta charset="UTF-8">
 
     <link rel="stylesheet" th:href="@{/css.css}" />
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
 
     <title>Title</title>
 </head>
 <body>
-
+    <div id="head">
+        <div id="headContent">
+            <h3>demoBooks.com</h3>
+        </div>
+    </div>
     <div class="container">
         <div class="row" th:each="book : ${books}">
             <a th:href="@{'book/' + ${book.nameImg}}">
