@@ -3,14 +3,16 @@ package com.samson.demobooks.models;
 public class Book {
 
     private int categoriesId;
-    private String name;
+    private String nameImg;
+    private String nameBook;
     private String author;
     private int year;
     private int pages;
 
-    public Book(int categoriesId, String name, String author, int year, int pages) {
+    public Book(int categoriesId, String nameImg, String nameBook, String author, int year, int pages) {
         this.categoriesId = categoriesId;
-        this.name = name;
+        this.nameImg = nameImg;
+        this.nameBook = nameBook;
         this.author = author;
         this.year = year;
         this.pages = pages;
@@ -20,8 +22,12 @@ public class Book {
         return categoriesId;
     }
 
-    public String getName() {
-        return name;
+    public String getNameImg() {
+        return nameImg;
+    }
+
+    public String getNameBook() {
+        return nameBook;
     }
 
     public String getAuthor() {

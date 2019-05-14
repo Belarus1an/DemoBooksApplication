@@ -1,20 +1,19 @@
-body{
-    background-color: black;
-}
-
 .container{
-    width: 500px;
-    right: 500px;
+    width: 545px;
+    height: 500px;
     margin: auto;
 }
 
 .row{
-    width: 110px;
-    height: 160px;
+    width: 170px;
+    height: 255px;
     float: left;
+    margin: 10px 5px;
+
 }
 
 img{
-    width: 110px;
-    height: 160px;
+    width: 170px;
+    height: 210px;
 }
+
