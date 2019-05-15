@@ -78,3 +78,21 @@ input {
     padding: 12px 20px 12px 40px;
 }
 
+#errorPng{
+    background-image: url("/img/error.png");
+    width: 130px;
+    height: 130px;
+    margin: auto;
+    margin-bottom: 5px;
+}
+
+
+#errorDiv{
+    width: 150px;
+    height: 150px;
+    margin: auto;
+    margin-top: 150px;
+    text-align: center;
+    font-family: 'Gloria Hallelujah', cursive;
+}
+

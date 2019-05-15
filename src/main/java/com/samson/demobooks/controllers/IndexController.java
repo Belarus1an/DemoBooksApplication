@@ -58,6 +58,9 @@ public class IndexController {
         Book book = bookRepo.getBookByName(name);
         Category category = categoryRepo.getCategoryByBook(book);
 
+        if (book == null && name.isEmpty()){
+            return "error";
+        }
         modelMap.put("book", book);
         modelMap.put("category", category);
 
@@ -70,6 +73,9 @@ public class IndexController {
         Book book = bookRepo.getBookByName(name);
         Category category = categoryRepo.getCategoryByBook(book);
 
+        if (book == null){
+            return "error";
+        }
         modelMap.put("book", book);
         modelMap.put("category", category);
 
