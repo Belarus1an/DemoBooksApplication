@@ -34,9 +34,9 @@ body{
 
 .row{
     width: 170px;
-    height: 255px;
+    height: 245px;
     float: left;
-    margin: 10px 10px;
+    margin: 5px 10px;
     text-align: center;
 }
 

@@ -16,7 +16,7 @@
     </div>
     <div class="container">
         <div class="row" th:each="book : ${books}">
-            <a class="rowImg" th:href="@{'book/' + ${book.nameImg}}">
+            <a class="rowImg" th:href="@{'/book/' + ${book.nameImg}}">
                 <img th:src="@{'/img/' + ${book.nameImg} + '.jpg'}">
             </a>
             <p th:text="${book.nameBook}"></p>

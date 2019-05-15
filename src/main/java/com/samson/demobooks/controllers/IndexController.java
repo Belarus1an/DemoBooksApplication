@@ -25,7 +25,6 @@ public class IndexController {
     public String getIndex(ModelMap modelMap){
 
         List<Book> bookList = bookRepo.getAllBooks();
-
         modelMap.put("books", bookList);
 
         return "index";
@@ -35,11 +34,20 @@ public class IndexController {
     public String getDetails(@PathVariable String nameImg, ModelMap modelMap){
 
         Book book = bookRepo.getBookNameImg(nameImg);
-        Category category = categoryRepo.getCategoryById(book);
+        Category category = categoryRepo.getCategoryByBook(book);
 
         modelMap.put("book", book);
         modelMap.put("category", category);
 
         return "bookDetails";
+    }
+
+    @RequestMapping("/book/category/{idCategory}")
+    public String showBooksByCategory(@PathVariable int idCategory, ModelMap modelMap){
+
+        List<Book> categoryList = bookRepo.getBooksByCategory(idCategory);
+        modelMap.put("books", categoryList);
+
+        return "index";
     }
 }

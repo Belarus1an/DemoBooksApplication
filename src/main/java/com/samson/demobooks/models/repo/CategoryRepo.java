@@ -4,6 +4,7 @@ import com.samson.demobooks.models.Book;
 import com.samson.demobooks.models.Category;
 import org.springframework.stereotype.Repository;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -21,7 +22,7 @@ public class CategoryRepo {
         return ALL_CATEGORIES;
     }
 
-    public Category getCategoryById(Book book){
+    public Category getCategoryByBook(Book book){
 
         for (Category value: ALL_CATEGORIES){
             if (book.getCategoriesId() == value.getCategoryId()){
@@ -30,4 +31,5 @@ public class CategoryRepo {
         }
         return null;
     }
+
 }
