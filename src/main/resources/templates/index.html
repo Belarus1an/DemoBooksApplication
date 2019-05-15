@@ -14,7 +14,15 @@
             <a th:href="@{/}"><h3>demoBooks.com</h3></a>
         </div>
     </div>
+
+    <div id="inputDiv">
+        <form>
+            <input name="filter" />
+        </form>
+    </div>
+
     <div class="container">
+
         <div class="row" th:each="book : ${books}">
             <a class="rowImg" th:href="@{'/book/' + ${book.nameImg}}">
                 <img th:src="@{'/img/' + ${book.nameImg} + '.jpg'}">
