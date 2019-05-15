@@ -24,7 +24,7 @@
             <br>
             <b>liczba stron: </b><i class="text" th:text="${book.pages}"></i>
             <br>
-            <a th:href="@{'category/' + ${category.categoryId}}">
+            <a th:href="@{'/book/category/' + ${category.categoryId}}">
                 <div class="button" th:text="${'#' + {category.name}}"></div>
             </a>
 

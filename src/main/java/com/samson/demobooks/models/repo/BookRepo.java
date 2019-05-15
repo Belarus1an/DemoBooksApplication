@@ -44,4 +44,14 @@ public class BookRepo {
         }
         return bookList;
     }
+
+    public Book getBookByName(String name) {
+
+        for (Book value: ALL_BOOKS){
+            if (name.equals(value.getNameBook())){
+                return value;
+            }
+        }
+        return null;
+    }
 }

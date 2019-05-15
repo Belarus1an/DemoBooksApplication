@@ -9,6 +9,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.List;
 
@@ -49,5 +50,29 @@ public class IndexController {
         modelMap.put("books", categoryList);
 
         return "index";
+    }
+
+    @RequestMapping("/filter")
+    public String filterIndex(@RequestParam String name, ModelMap modelMap){
+
+        Book book = bookRepo.getBookByName(name);
+        Category category = categoryRepo.getCategoryByBook(book);
+
+        modelMap.put("book", book);
+        modelMap.put("category", category);
+
+        return "bookDetails";
+    }
+
+    @RequestMapping("/book/category/filter")
+    public String filterBookDetails(@RequestParam String name, ModelMap modelMap){
+
+        Book book = bookRepo.getBookByName(name);
+        Category category = categoryRepo.getCategoryByBook(book);
+
+        modelMap.put("book", book);
+        modelMap.put("category", category);
+
+        return "bookDetails";
     }
 }
